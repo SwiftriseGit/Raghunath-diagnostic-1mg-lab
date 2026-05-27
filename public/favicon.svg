@@ -1,0 +1,43 @@
+<svg width="128" height="128" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle shape -->
+  <circle cx="50" cy="50" r="48" fill="#FBF9F6" stroke="#EAE2D8" stroke-width="1.5" />
+  
+  <!-- Capital Serif R Letter Body in Deep Burgundy -->
+  <path
+    d="M 46 22 L 56 22 C 68 22, 76 27, 76 38 C 76 48, 68 53, 56 53 L 46 53 Z"
+    fill="#7E1E2B"
+  />
+  <path
+    d="M 52 53 L 73 80 L 85 80 L 61 53 Z"
+    fill="#7E1E2B"
+  />
+
+  <!-- Doctor Coat Left Lapel & Right Lapel forming V-neck -->
+  <path d="M 32 22 L 48 22 L 48 80 L 26 80 L 26 38 Z" fill="#FFFFFF" stroke="#D1C8BE" stroke-width="1" />
+  
+  <!-- Red Necktie -->
+  <path d="M 37 32 L 39 30 L 41 32 L 39 42 Z" fill="#7E1E2B" />
+  <polygon points="38,30 40,30 39,26" fill="#7E1E2B" />
+
+  <!-- Lapels crease -->
+  <path d="M 26 30 L 33 42 L 33 80" fill="none" stroke="#B0A699" stroke-width="1" />
+  <path d="M 48 30 L 41 42 L 41 80" fill="none" stroke="#B0A699" stroke-width="1" />
+  
+  <!-- Small Red Cross Emblem on the coat pocket -->
+  <path d="M 29 48 H 33 M 31 46 V 50" stroke="#7E1E2B" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- Stethoscope Gold Chestpiece and tubing -->
+  <path
+    d="M 39 30 C 37 34, 30 38, 30 46 C 30 54, 39 58, 42 66"
+    fill="none"
+    stroke="#4A4A4A"
+    stroke-width="1.8"
+    stroke-linecap="round"
+  />
+  <!-- Stethoscope Chestpiece (Gold/Bronze) -->
+  <circle cx="43" cy="69" r="6.5" fill="#A68B52" stroke="#806835" stroke-width="1" />
+  <circle cx="43" cy="69" r="3" fill="#EAE2D8" />
+  
+  <!-- Gold details on R -->
+  <path d="M 56 22 L 53 25 C 62 25, 72 29, 72 38 C 72 47, 62 50, 53 50 L 56 53 Z" fill="#A68B52" opacity="0.3" />
+</svg>
