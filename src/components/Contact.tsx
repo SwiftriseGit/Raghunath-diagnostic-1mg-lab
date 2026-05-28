@@ -48,7 +48,7 @@ export default function Contact() {
                   <div>
                     <h3 style={{ fontFamily: jk, fontWeight: 800, fontSize: 16, color: '#0f172a', marginBottom: 6 }}>{c.title}</h3>
                     {c.href
-                      ? <a href={c.href} style={{ fontSize: 14, color: burgundy, fontWeight: 700, textDecoration: 'none', wordBreak: 'break-all' }}>{c.val}</a>
+                      ? <a href={c.href} style={{ fontSize: 'clamp(11px, 3.2vw, 14px)', color: burgundy, fontWeight: 700, textDecoration: 'none', wordBreak: 'break-word' }}>{c.val}</a>
                       : <p style={{ fontSize: 13, color: '#475569', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>{c.val}</p>
                     }
                   </div>

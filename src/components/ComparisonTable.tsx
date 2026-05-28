@@ -19,7 +19,7 @@ export default function ComparisonTable() {
   const display = expanded ? cats : cats.slice(0, 5);
 
   return (
-    <section id="compare" style={{ position: 'relative', padding: 'clamp(80px,10vw,120px) 0', background: 'linear-gradient(180deg, #FAF6F0 0%, #ffffff 100%)' }}>
+    <section id="compare" style={{ position: 'relative', padding: 'clamp(60px,8vw,90px) 0 clamp(30px,4vw,50px) 0', background: 'linear-gradient(180deg, #FAF6F0 0%, #ffffff 100%)' }}>
       <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 24px' }}>
 
         {/* Header */}

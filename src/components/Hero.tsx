@@ -52,8 +52,8 @@ export default function Hero() {
 
             <p style={{ fontSize: 'clamp(15px, 2vw, 18px)', color: '#475569', maxWidth: 520, marginBottom: 32, lineHeight: 1.8 }}
               className="lg:!mx-0 mx-auto">
-              NABL Accredited & CAP Certified diagnostic lab in Jeypore, Odisha.
-              Trusted by <strong style={{ color: burgundy, fontWeight: 700 }}>10,000+</strong> families for highly accurate & affordable health checkups.
+              NABL Accredited & CAP Certified diagnostic services in Jeypore, Odisha. 
+              <strong style={{ color: burgundy, fontWeight: 700 }}>Raghunath Diagnostics</strong>, in association with <strong style={{ color: burgundy, fontWeight: 700 }}>Tata 1mg Labs</strong>, provides highly accurate and affordable health checkup plans with free home sample collection.
             </p>
 
             {/* Note Badge */}
@@ -64,7 +64,7 @@ export default function Hero() {
               textAlign: 'left', lineHeight: 1.4, maxWidth: '100%'
             }}>
               <FiPhone size={14} style={{ marginTop: 2, flexShrink: 0 }} />
-              <span>Book via Call or WhatsApp — No online booking needed</span>
+              <span>Book via Call or WhatsApp</span>
             </div>
 
             {/* Premium CTA Buttons */}

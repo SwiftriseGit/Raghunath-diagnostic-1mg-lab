@@ -5,16 +5,16 @@ import Logo from './Logo';
 const softGold = '#A68B52';
 
 export default function Footer() {
-  const ls: React.CSSProperties = { fontSize: 13, color: '#e4d2bf', textDecoration: 'none', display: 'block', marginBottom: 10, transition: 'color 0.2s', fontWeight: 500 };
+  const ls: React.CSSProperties = { fontSize: 14, color: '#f3e8d2', textDecoration: 'none', display: 'block', marginBottom: 8, transition: 'color 0.2s', fontWeight: 600 };
   const hov = (e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color = '#ffffff'; };
-  const out = (e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color = '#e4d2bf'; };
+  const out = (e: React.MouseEvent<HTMLAnchorElement>) => { e.currentTarget.style.color = '#f3e8d2'; };
 
   return (
-    <footer style={{ background: '#210A0D', color: '#ffffff', paddingTop: 'clamp(56px,8vw,80px)', paddingBottom: 28 }}>
+    <footer style={{ background: '#210A0D', color: '#ffffff', paddingTop: 'clamp(32px,5vw,48px)', paddingBottom: 18 }}>
       <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 24px' }}>
-        <div style={{ display: 'grid', gap: 'clamp(28px,4vw,40px)', marginBottom: 48 }}
+        <div style={{ display: 'grid', gap: 'clamp(20px,3vw,28px)', marginBottom: 24 }}
           className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          
+
           {/* Brand Column */}
           <div>
             <div style={{
@@ -22,22 +22,23 @@ export default function Footer() {
               alignItems: 'center',
               justifyContent: 'center',
               background: '#ffffff',
-              borderRadius: '50%',
+              borderRadius: 16,
               border: '2px solid rgba(166, 139, 82, 0.35)',
-              boxShadow: '0 8px 24px rgba(0, 0, 0, 0.25), 0 0 0 6px rgba(166, 139, 82, 0.15)',
-              marginBottom: 18
+              boxShadow: '0 8px 24px rgba(0, 0, 0, 0.25)',
+              marginBottom: 14,
+              overflow: 'hidden'
             }}
-            className="w-16 h-16 sm:w-24 sm:h-24">
+              className="w-16 h-16 sm:w-20 sm:h-20">
               <Logo size="sm" />
             </div>
-            <p style={{ fontSize: 13, color: '#e4d2bf', lineHeight: 1.7, marginBottom: 18, fontWeight: 500 }}>
-               NABL & CAP Certified lab associated with Tata 1mg Labs.
+            <p style={{ fontSize: 14, color: '#f3e8d2', lineHeight: 1.6, marginBottom: 14, fontWeight: 600 }}>
+              Raghunath Diagnostics, in association with Tata 1mg Labs, provides accurate and affordable health checkups with free home sample collection in Jeypore.
             </p>
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: 6,
               padding: '6px 14px', background: 'rgba(166,139,82,0.08)', borderRadius: 50,
               fontSize: 11, color: softGold, border: '1.5px solid rgba(166,139,82,0.2)',
-              fontWeight: 700,
+              fontWeight: 800,
             }}>
               <span style={{ width: 6, height: 6, background: '#25d366', borderRadius: '50%', display: 'inline-block' }} />
               Tata 1mg Partner
@@ -46,39 +47,57 @@ export default function Footer() {
 
           {/* Links Column */}
           <div>
-            <h4 style={{ fontWeight: 800, fontSize: 12, color: '#ffffff', marginBottom: 16, letterSpacing: 1.5, textTransform: 'uppercase' }}>Quick Links</h4>
-            {[['Home','#hero'],['Packages','#packages'],['Compare','#compare'],['Why Us','#why-us'],['Contact','#contact']].map(([l,h]) => (
+            <h4 style={{ fontWeight: 800, fontSize: 12, color: '#ffffff', marginBottom: 14, letterSpacing: 1.5, textTransform: 'uppercase' }}>Quick Links</h4>
+            {[
+              ['Home', '#hero'],
+              ['Plans', '#packages'],
+              ['Packages', '#compare'],
+              ['Why Us', '#why-us'],
+              ['Contact', '#contact']
+            ].map(([l, h]) => (
               <a key={h} href={h} style={ls} onMouseEnter={hov} onMouseLeave={out}>{l}</a>
             ))}
           </div>
 
           {/* Tests Column */}
           <div>
-            <h4 style={{ fontWeight: 800, fontSize: 12, color: '#ffffff', marginBottom: 16, letterSpacing: 1.5, textTransform: 'uppercase' }}>Tests Available</h4>
-            {['Diabetes Care','Heart Health','Liver & Kidney','Thyroid Profile','Vitamin Tests','Iron Studies'].map(c => (
-              <span key={c} style={{ display: 'block', fontSize: 13, color: '#e4d2bf', marginBottom: 10, fontWeight: 500 }}>{c}</span>
+            <h4 style={{ fontWeight: 800, fontSize: 12, color: '#ffffff', marginBottom: 14, letterSpacing: 1.5, textTransform: 'uppercase' }}>Tests Available</h4>
+            {['Diabetes Care', 'Heart Health', 'Liver & Kidney', 'Thyroid Profile', 'Vitamin Tests', 'Iron Studies'].map(c => (
+              <span key={c} style={{ display: 'block', fontSize: 14, color: '#f3e8d2', marginBottom: 8, fontWeight: 600 }}>{c}</span>
             ))}
           </div>
 
           {/* Contact Column */}
           <div>
-            <h4 style={{ fontWeight: 800, fontSize: 12, color: '#ffffff', marginBottom: 16, letterSpacing: 1.5, textTransform: 'uppercase' }}>Contact</h4>
+            <h4 style={{ fontWeight: 800, fontSize: 12, color: '#ffffff', marginBottom: 14, letterSpacing: 1.5, textTransform: 'uppercase' }}>Contact</h4>
             <a href={`tel:${contactInfo.phone}`} style={{ ...ls, display: 'flex', alignItems: 'center', gap: 8 }} onMouseEnter={hov} onMouseLeave={out}>
-              <FiPhone size={14} /> {contactInfo.phoneDisplay}
+              <FiPhone size={14} style={{ flexShrink: 0 }} /> {contactInfo.phoneDisplay}
             </a>
             <a href={`mailto:${contactInfo.email}`} style={{ ...ls, display: 'flex', alignItems: 'center', gap: 8, wordBreak: 'break-all' }} onMouseEnter={hov} onMouseLeave={out}>
-              <FiMail size={14} /> {contactInfo.email}
+              <FiMail size={14} style={{ flexShrink: 0 }} /> {contactInfo.email}
             </a>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#e4d2bf', fontWeight: 500 }}>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: '#f3e8d2', fontWeight: 600 }}>
               <FiMapPin size={14} style={{ flexShrink: 0 }} /> Jeypore, Odisha 764003
             </span>
           </div>
         </div>
 
         {/* Bottom copyright */}
-        <div style={{ borderTop: '1px solid rgba(166,139,82,0.15)', paddingTop: 28, display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 12 }}>
-          <p style={{ fontSize: 12, color: '#8b7074', fontWeight: 500 }}>© {new Date().getFullYear()} Raghunath Diagnostics. All rights reserved.</p>
-          <p style={{ fontSize: 12, color: '#8b7074', fontWeight: 500 }}>Associated with <span style={{ color: softGold, fontWeight: 700 }}>Tata 1mg</span></p>
+        <div style={{ borderTop: '1px solid rgba(166,139,82,0.15)', paddingTop: 18, display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 12 }}>
+          <p style={{ fontSize: 12, color: '#a2888c', fontWeight: 600 }}>
+            © 2026 All rights reserved by{' '}
+            <a
+              href="https://swiftrise.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: softGold, textDecoration: 'underline', fontWeight: 800, transition: 'color 0.2s' }}
+              onMouseEnter={e => { e.currentTarget.style.color = '#ffffff'; }}
+              onMouseLeave={e => { e.currentTarget.style.color = softGold; }}
+            >
+              SwiftRise Solution Pvt.Ltd.
+            </a>
+          </p>
+          <p style={{ fontSize: 12, color: '#a2888c', fontWeight: 600 }}>Associated with <span style={{ color: softGold, fontWeight: 800 }}>Tata 1mg</span></p>
         </div>
       </div>
     </footer>

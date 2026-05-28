@@ -21,8 +21,8 @@ export default function Navbar() {
 
   const links = [
     { label: 'Home', href: '#hero' },
-    { label: 'Packages', href: '#packages' },
-    { label: 'Compare', href: '#compare' },
+    { label: 'Plans', href: '#packages' },
+    { label: 'Packages', href: '#compare' },
     { label: 'Why Us', href: '#why-us' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -44,10 +44,10 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <div style={{ display: 'none', alignItems: 'center', gap: 2 }} className="lg:!flex">
+          <div style={{ display: 'none', alignItems: 'center', gap: 4  }} className="lg:!flex">
             {links.map(l => (
               <a key={l.href} href={l.href} style={{
-                padding: '8px 20px', fontSize: 16, fontWeight: 600, color: '#475569',
+                padding: '8px 20px', fontSize: 18, fontWeight: 600, color: '#475569',
                 textDecoration: 'none', borderRadius: 8, transition: 'all 0.2s',
               }}
                 onMouseEnter={e => { e.currentTarget.style.color = burgundy; e.currentTarget.style.background = beigeWash; }}
@@ -61,7 +61,7 @@ export default function Navbar() {
             <a href={`tel:${contactInfo.phone}`} style={{
               display: 'inline-flex', alignItems: 'center', gap: 7,
               padding: '10px 20px', background: burgundy, color: '#fff',
-              fontSize: 13, fontWeight: 700, borderRadius: 50, textDecoration: 'none',
+              fontSize: 15, fontWeight: 700, borderRadius: 50, textDecoration: 'none',
               boxShadow: '0 4px 14px rgba(126, 30, 43, 0.2)', transition: 'all 0.2s',
             }}
               onMouseEnter={e => { e.currentTarget.style.background = darkWine; e.currentTarget.style.transform = 'translateY(-1px)'; }}
@@ -73,7 +73,7 @@ export default function Navbar() {
               target="_blank" rel="noopener noreferrer" style={{
                 display: 'inline-flex', alignItems: 'center', gap: 7,
                 padding: '9px 20px', border: `2px solid ${primaryGold}`, color: primaryGold,
-                fontSize: 13, fontWeight: 700, borderRadius: 50, textDecoration: 'none',
+                fontSize: 14, fontWeight: 700, borderRadius: 50, textDecoration: 'none',
                 background: 'transparent', transition: 'all 0.2s',
               }}
               onMouseEnter={e => { e.currentTarget.style.background = primaryGold; e.currentTarget.style.color = '#fff'; }}

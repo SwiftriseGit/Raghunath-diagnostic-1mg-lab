@@ -6,7 +6,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import HowItWorks from './components/HowItWorks';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import FloatingCTA from './components/FloatingCTA';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
@@ -21,9 +21,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-      <FloatingCTA />
-      {/* Bottom padding for mobile floating CTA */}
-      <div className="lg:hidden" style={{ height: 80 }} />
+      <ScrollToTop />
     </div>
   );
 }

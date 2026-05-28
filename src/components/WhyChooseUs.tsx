@@ -13,7 +13,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" style={{ position: 'relative', padding: 'clamp(80px,10vw,120px) 0', background: '#ffffff', overflow: 'hidden' }}>
+    <section id="why-us" style={{ position: 'relative', padding: 'clamp(30px,4vw,50px) 0 clamp(60px,8vw,100px) 0', background: '#ffffff', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', bottom: -100, left: -100, width: 400, height: 400, background: 'rgba(166,139,82,0.06)', borderRadius: '50%', filter: 'blur(100px)', pointerEvents: 'none' }} />
 
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 20px', position: 'relative' }}>
