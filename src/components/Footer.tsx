@@ -34,15 +34,15 @@ export default function Footer() {
             <p style={{ fontSize: 14, color: '#f3e8d2', lineHeight: 1.6, marginBottom: 14, fontWeight: 600 }}>
               Raghunath Diagnostics, in association with Tata 1mg Labs, provides accurate and affordable health checkups with free home sample collection in Jeypore.
             </p>
-            <div style={{
+            {/* <div style={{
               display: 'inline-flex', alignItems: 'center', gap: 6,
               padding: '6px 14px', background: 'rgba(166,139,82,0.08)', borderRadius: 50,
               fontSize: 11, color: softGold, border: '1.5px solid rgba(166,139,82,0.2)',
               fontWeight: 800,
             }}>
               <span style={{ width: 6, height: 6, background: '#25d366', borderRadius: '50%', display: 'inline-block' }} />
-              Tata 1mg Partner
-            </div>
+              Tata 1mg Partner         
+            </div> */}
           </div>
 
           {/* Links Column */}
@@ -97,7 +97,7 @@ export default function Footer() {
               SwiftRise Solution Pvt.Ltd.
             </a>
           </p>
-          <p style={{ fontSize: 12, color: '#a2888c', fontWeight: 600 }}>Associated with <span style={{ color: softGold, fontWeight: 800 }}>Tata 1mg</span></p>
+          <p style={{ fontSize: 12, color: '#a2888c', fontWeight: 600 }}>Associated with <img src="/images/1mglab.png" alt="Tata 1mg Labs Logo" className="h-[25px] w-auto object-contain inline-block" style={{ verticalAlign: 'middle', marginLeft: 4, background: '#ffffff', borderRadius: 6, padding: 2 }} /></p>
         </div>
       </div>
     </footer>

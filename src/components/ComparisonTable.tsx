@@ -23,7 +23,7 @@ export default function ComparisonTable() {
       <div style={{ maxWidth: 1440, margin: '0 auto', padding: '0 24px' }}>
 
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 'clamp(32px,5vw,56px)' }}>
+        <div style={{ textAlign: 'center', marginBottom: '20px' }}>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '8px 18px', background: '#ffffff', border: `1.5px solid ${primaryGold}`,
@@ -31,12 +31,12 @@ export default function ComparisonTable() {
             letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 16,
             boxShadow: '0 2px 8px rgba(126, 30, 43, 0.05)',
           }}><HiOutlineTableCells size={14} /> Package Comparison</div>
-          <h2 style={{ fontFamily: jk, fontWeight: 800, fontSize: 'clamp(28px,4.5vw,46px)', color: '#0f172a', marginBottom: 14, letterSpacing: -0.5 }}>
-            Compare <span style={{ color: burgundy }}>Packages</span>
+          <h2 style={{ fontFamily: jk, fontWeight: 800, fontSize: 'clamp(28px,4.5vw,46px)', color: '#0f172a', marginBottom: 14, letterSpacing: -0.5, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+            <img src="/images/1mglab.png" alt="Tata 1mg Labs Logo" className="h-[40px] md:h-[50px] lg:h-[60px] w-auto object-contain mx-auto" />
           </h2>
-          <p style={{ fontSize: 'clamp(14px,1.5vw,17px)', color: '#475569', maxWidth: 540, margin: '0 auto', fontWeight: 500, lineHeight: 1.7 }}>
-            See exactly which tests are included in each plan. Scroll right on mobile →
-          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+            <img src="/images/50-removebg-preview.png" alt="Flat 50% Off Ribbon" className="h-[45px] md:h-[65px] lg:h-[85px] w-auto object-contain" />
+          </div>
         </div>
 
         {/* Table Container */}
@@ -45,13 +45,13 @@ export default function ComparisonTable() {
             <table style={{ width: '100%', minWidth: 780, borderCollapse: 'separate', borderSpacing: 0 }}>
               <thead>
                 <tr>
-                  <th style={{ textAlign: 'left', padding: '16px 20px', fontSize: 13, fontWeight: 700, color: '#ffffff', background: burgundy, position: 'sticky', left: 0, zIndex: 5, minWidth: 180 }}>
+                  <th className="sticky-first-col" style={{ textAlign: 'left', padding: '16px 20px', fontSize: 13, fontWeight: 700, color: '#ffffff', background: burgundy, position: 'sticky', left: 0, zIndex: 5 }}>
                     Test Name
                   </th>
                   {packages.map(p => (
-                    <th key={p.id} style={{ textAlign: 'center', padding: '16px 12px', background: burgundy, minWidth: 95 }}>
-                      <div style={{ color: '#ffffff', fontSize: 13, fontWeight: 800 }}>{p.name}</div>
-                      <div style={{ color: '#f3e8d2', fontSize: 11, fontWeight: 600, marginTop: 2 }}>{p.testCount} Tests</div>
+                    <th key={p.id} className="table-pkg-header" style={{ textAlign: 'center', padding: '16px 12px', background: burgundy, minWidth: 95 }}>
+                      <div className="table-pkg-name" style={{ color: '#ffffff', fontSize: 13, fontWeight: 800 }}>{p.name}</div>
+                      <div className="table-pkg-count" style={{ color: '#f3e8d2', fontSize: 11, fontWeight: 600, marginTop: 2 }}>{p.testCount} Tests</div>
                     </th>
                   ))}
                 </tr>
@@ -68,7 +68,7 @@ export default function ComparisonTable() {
                     </tr>
                     {cat.tests.map((t, i) => (
                       <tr key={t.test}>
-                        <td style={{
+                        <td className="sticky-first-col" style={{
                           padding: '12px 20px', fontSize: 13, fontWeight: 600, color: '#334155',
                           borderBottom: '1px solid #f1f5f9', background: i % 2 ? '#f8fafc' : '#ffffff',
                           position: 'sticky', left: 0, zIndex: 2,
@@ -93,16 +93,16 @@ export default function ComparisonTable() {
 
                 {/* Sticky Price Bottom Row */}
                 <tr>
-                  <td style={{ padding: '18px 20px', color: '#ffffff', fontWeight: 800, fontSize: 13, background: burgundy, position: 'sticky', left: 0, zIndex: 2 }}>
+                  <td className="sticky-first-col" style={{ padding: '18px 20px', color: '#ffffff', fontWeight: 800, fontSize: 13, background: burgundy, position: 'sticky', left: 0, zIndex: 2 }}>
                     Price
                   </td>
                   {packages.map(p => (
-                    <td key={p.id} style={{ textAlign: 'center', padding: '18px 12px', background: burgundy }}>
-                      <div style={{ position: 'relative', display: 'inline-block', color: '#f3e8d2', fontSize: 12, marginBottom: 3, fontWeight: 600 }}>
+                    <td key={p.id} className="table-pkg-price" style={{ textAlign: 'center', padding: '18px 12px', background: burgundy }}>
+                      <div className="table-pkg-mrp" style={{ position: 'relative', display: 'inline-block', color: '#f3e8d2', fontSize: 12, marginBottom: 3, fontWeight: 600 }}>
                         ₹{p.mrp.toLocaleString()}
                         <span style={{ position: 'absolute', left: -2, right: -2, top: '50%', height: 1.5, background: primaryGold, transform: 'rotate(-8deg)' }} />
                       </div>
-                      <div style={{ color: '#ffffff', fontWeight: 900, fontSize: 19, fontFamily: jk }}>₹{p.offerPrice.toLocaleString()}</div>
+                      <div className="table-pkg-offer" style={{ color: '#ffffff', fontWeight: 900, fontSize: 19, fontFamily: jk }}>₹{p.offerPrice.toLocaleString()}</div>
                     </td>
                   ))}
                 </tr>
@@ -125,6 +125,42 @@ export default function ComparisonTable() {
           )}
         </div>
       </div>
+
+      <style>{`
+        .sticky-first-col {
+          min-width: 180px;
+          max-width: 180px;
+          width: 180px;
+        }
+        @media (max-width: 640px) {
+          .sticky-first-col {
+            min-width: 120px !important;
+            max-width: 120px !important;
+            width: 120px !important;
+            font-size: 11px !important;
+            padding: 10px 10px !important;
+          }
+          .table-pkg-header {
+            min-width: 80px !important;
+            padding: 12px 6px !important;
+          }
+          .table-pkg-name {
+            font-size: 11px !important;
+          }
+          .table-pkg-count {
+            font-size: 9px !important;
+          }
+          .table-pkg-price {
+            padding: 12px 6px !important;
+          }
+          .table-pkg-mrp {
+            font-size: 10px !important;
+          }
+          .table-pkg-offer {
+            font-size: 15px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -1,7 +1,6 @@
 import { contactInfo, featuredPackage } from '../data/packages';
 import { FiPhone, FiCheckCircle, FiShield, FiActivity, FiClock, FiHome } from 'react-icons/fi';
 import { IoLogoWhatsapp } from 'react-icons/io5';
-import { HiOutlineSparkles } from 'react-icons/hi2';
 
 const burgundy = '#7E1E2B';
 const darkWine = '#631620';
@@ -33,13 +32,12 @@ export default function Hero() {
           <div style={{ flex: '1 1 0', textAlign: 'center' }} className="lg:!text-left">
             {/* Associated with Tata 1mg Badge */}
             <div style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              padding: '8px 18px', background: '#ffffff', border: `1.5px solid ${primaryGold}`,
+              display: 'inline-flex', alignItems: 'center',
+              padding: '6px 18px', background: '#ffffff', border: `1.5px solid ${primaryGold}`,
               borderRadius: 50, marginBottom: 28, boxShadow: '0 4px 12px rgba(126, 30, 43, 0.08)'
             }}>
-              <HiOutlineSparkles size={14} color={primaryGold} />
-              <span style={{ fontSize: 11, fontWeight: 800, color: burgundy, letterSpacing: 1.5, textTransform: 'uppercase' }}>
-                Associated with Tata 1mg Labs
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11, fontWeight: 800, color: burgundy, letterSpacing: 1.5, textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+                Associated with <img src="/images/1mg.png" alt="Tata 1mg Labs Logo" className="h-[23px] lg:h-[30px] w-auto object-contain inline-block" />
               </span>
             </div>
 
@@ -52,8 +50,8 @@ export default function Hero() {
 
             <p style={{ fontSize: 'clamp(15px, 2vw, 18px)', color: '#475569', maxWidth: 520, marginBottom: 32, lineHeight: 1.8 }}
               className="lg:!mx-0 mx-auto">
-              NABL Accredited & CAP Certified diagnostic services in Jeypore, Odisha. 
-              <strong style={{ color: burgundy, fontWeight: 700 }}>Raghunath Diagnostics</strong>, in association with <strong style={{ color: burgundy, fontWeight: 700 }}>Tata 1mg Labs</strong>, provides highly accurate and affordable health checkup plans with free home sample collection.
+              NABL Accredited & CAP Certified diagnostic services in Jeypore, Odisha.
+              <strong style={{ color: burgundy, fontWeight: 700 }}>Raghunath Diagnostics</strong>, in association with <img src="/images/1mglab.png" alt="Tata 1mg Labs Logo" className="h-[20px] lg:h-[25px] w-auto object-contain inline-block align-middle" />, provides highly accurate and affordable health checkup plans with free home sample collection.
             </p>
 
             {/* Note Badge */}
@@ -126,17 +124,12 @@ export default function Hero() {
               boxShadow: '0 20px 48px rgba(126, 30, 43, 0.07), 0 4px 12px rgba(0, 0, 0, 0.03)',
             }}>
               {/* Reference Style Floating Badge */}
-              <div style={{
-                position: 'absolute', top: -16, left: 32,
-                background: `linear-gradient(135deg, ${burgundy}, ${primaryGold})`, color: '#ffffff',
-                fontSize: 11, fontWeight: 800, padding: '8px 20px',
-                borderRadius: 50, boxShadow: '0 4px 16px rgba(126,30,43,0.3)',
-                display: 'flex', alignItems: 'center', gap: 6,
-                letterSpacing: 1,
+              <img src="/images/50-removebg-preview.png" alt="Flat 50% Off" style={{
+                position: 'absolute', top: -20, left: 24,
+                height: 38, width: 'auto',
+                filter: 'drop-shadow(0 4px 10px rgba(126, 30, 43, 0.15))',
                 animation: 'heroFloat 4.5s ease-in-out infinite',
-              }}>
-                FLAT 50% OFF
-              </div>
+              }} />
 
               <div style={{ paddingTop: 10 }}>
                 {/* Micro heading */}
