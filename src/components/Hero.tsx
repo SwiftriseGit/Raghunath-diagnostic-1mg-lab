@@ -37,7 +37,7 @@ export default function Hero() {
               borderRadius: 50, marginBottom: 28, boxShadow: '0 4px 12px rgba(126, 30, 43, 0.08)'
             }}>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 11, fontWeight: 800, color: burgundy, letterSpacing: 1.5, textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
-                Associated with <img src="/images/1mg.png" alt="Tata 1mg Labs Logo" className="h-[23px] lg:h-[30px] w-auto object-contain inline-block" />
+                Associated with <img src="/images/1mg.png" alt="Tata 1mg Labs Logo" className="h-[27px] lg:h-[30px] w-auto object-contain inline-block" />
               </span>
             </div>
 
